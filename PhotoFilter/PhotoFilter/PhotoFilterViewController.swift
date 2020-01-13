@@ -13,6 +13,8 @@ class PhotoFilterViewController: UIViewController {
             let scale = UIScreen.main.scale
             scaledSize = CGSize(width: scaledSize.width * scale, height: scaledSize.height * scale)
             print("Size: \(scaledSize)")
+            
+            // .imageByScaling is where we flatten and resize the image to fix the orientation
             scaledImage = originalImage.imageByScaling(toSize: scaledSize)
         }
     }
